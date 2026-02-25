@@ -1,17 +1,17 @@
 <?php
-// DATA DIRI 
+// DATA DIRI
 $nama_lengkap = "Syauqi Athaya Ramadhani";
 $nama_panggilan = "Syauqi";
 $agama = "Islam";
-$tempat_lahir = "Pati";
-$tanggal_lahir = "22";
-$bulan_lahir = "08";
+$tempat_lahir = "Riau";
+$tanggal_lahir = "9";
+$bulan_lahir = "Desember";
 $tahun_lahir = "2009";
-$alamat = "Jatisari RT6 RW4 Mijen";
+$alamat = "Jalipari RT67 RW21 Majun";
 $gender = "Laki-laki";
 $kewarganegaraan = "Indonesia";
-$no_wa = "+62 882-3326-1669";
-$email = "kursibolong23@email.com";
+$no_wa = "0828282828287";
+$email = "kurikuir23@email.com";
 $umur = date("Y") - $tahun_lahir;
 $tahun_sekarang = date("Y");
 $tahun_10 = $tahun_sekarang + 10;
@@ -19,7 +19,7 @@ $umur_10 = $umur + 10;
 $keinginan_10tahun_lagi = "membuat game ataupun menjaga data";
 $motto = "Pelajaran Datang Dari Hal Yang Menyakitkan";
 $motto2 = "Pengalaman Adalah Guru Terbaik";
-$foto = "Suqio.jpg";
+$foto = "syauqi.jpg";
 
 // Rencana
 $rencana = "belajar coding, ikut kursus cybersecurity, latihan CTF, dan latihan membuat game.";
@@ -37,9 +37,9 @@ $skill = [
 
 // Riwayat Pendidikan
 $pendidikan = [
-    ["TK", "TKIT Baitussalam", "2014", "2016"],
-    ["SD", "SDIT Miftahussalam", "2016", "2022"],
-    ["SMP", "SMPN 23 Semarang", "2022", "2025"]
+    ["TK", "TK Jujutsu", "2014", "2016"],
+    ["SD", "SD 1 Jujutsu", "2016", "2022"],
+    ["SMP", "SMP 3 Jujutsu", "2022", "2025"]
 ];
 
 // Jadwal
@@ -120,7 +120,7 @@ $halaman = isset($_GET['page']) ? $_GET['page'] : 'biodata';
 
         .motto {
             display: inline-block;
-            padding:12px 100%;
+            padding: 12px 100%;
             font-size: 20px;
             font-weight: bold;
             color: #f0f9ff;
@@ -154,8 +154,6 @@ $halaman = isset($_GET['page']) ? $_GET['page'] : 'biodata';
             margin: 10px 0;
             border-bottom: 1px dashed #4a5568;
             padding-bottom: 8px;
-            flex-wrap: wrap;
-            word-break: break-all;     
         }
 
         .label-info {
@@ -285,9 +283,6 @@ $halaman = isset($_GET['page']) ? $_GET['page'] : 'biodata';
             .dua-kolom {
                 grid-template-columns: 1fr;
             }
-            .kartu{
-               min-width: 0;
-            }
         }
     </style>
 </head>
@@ -299,13 +294,13 @@ $halaman = isset($_GET['page']) ? $_GET['page'] : 'biodata';
         <h1 class="judul">📋 Biodata Diri</h1>
 
         <div style="background: #374151; padding: 15px; border-radius: 30px; margin-bottom: 15px;">
-            <span style="font-size: 24px; font-weight: bold;">👤 <?= $nama_lengkap ?></span>
+            <span style="font-size: 24px;">👤 <?= $nama_lengkap ?></span>
         </div>
 
         <!-- MOTTO BERJALAN DARI KANAN KE KIRI -->
         <div class="motto-container">
             <div class="motto">
-                 ✦ <?= $motto ?> ✦ <?= $motto2 ?> ✦ 
+                ✦ <?= $motto ?> ✦  <?= $motto2 ?>  ✦ 
             </div>
         </div>
 
@@ -490,7 +485,7 @@ $halaman = isset($_GET['page']) ? $_GET['page'] : 'biodata';
                     </tr>
                     <tr>
                         <td>Selasa</td>
-                        <td>Keisha, Shafanira, Aurora, Sila, <span style="color: pink;"><b>Syauqi</b></span>, Nail, Wahyu</td>
+                        <td>Keisha, Shafanira, Aurora, Sila, <span style="color: pink"><b>Syauqi</b></span>, Nail, Wahyu</td>
                     </tr>
                     <tr>
                         <td>Rabu</td>
@@ -515,19 +510,19 @@ $halaman = isset($_GET['page']) ? $_GET['page'] : 'biodata';
     </div>
 <?php endif; ?>
 
-<!-- JAVASCRIPT UNTUK PROGRESS BAR (SESUAI KETENTUAN GURU) -->
 <script>
 // Fungsi untuk menjalankan progress bar
 function jalankanProgressBar() {
     // Ambil semua progress bar
     var bars = document.querySelectorAll('.progress-fill');
     
+    // Loop untuk setiap progress bar
     for (var i = 0; i < bars.length; i++) {
         var bar = bars[i];
         // Ambil angka target dari attribute data-target
         var target = bar.getAttribute('data-target');
         
-        // Set width sesuai target
+        // Set width sesuai target (pake JavaScript)
         bar.style.width = target + '%';
         // Tampilkan angkanya
         bar.innerHTML = target + '%';
